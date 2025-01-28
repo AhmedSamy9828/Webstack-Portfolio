@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+header {
+  background: linear-gradient(120deg, #673ab7, #512da8);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #ffca28;
+  color: #512da8;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(103, 58, 183, 0.2);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(30px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #512da8;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #ffca28;
+  border: none;
+  border-radius: 25px;
+  color: #512da8;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #673ab7;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+form label {
+  font-weight: bold;
+  color: #512da8;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+form button {
+  padding: 0.5rem 1.5rem;
+  background-color: #673ab7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #512da8;
+  transform: scale(1.05);
+}
+
+#notification {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+
+#notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.note {
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  width: 180px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.note:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.cta-button {
+  margin-top: 1rem;
+}
+
+form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.fade-in {
+  animation: fadeInEffect 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInEffect {
+  to {
+    opacity: 1;
+  }
+}
